@@ -1,0 +1,218 @@
+[
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "<!DOCTYPE html>\n        <html>\n        <head>\n            <meta charset=\"UTF-8\">\n            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n            <title>MockServer API Endpoints</title>\n        <style>\n            body { \n                font-family: Arial, sans-serif; \n                background: #141419; /* Darker background */\n                padding: 20px; \n                text-align: center; \n                color: #cdd6f4; /* Light text color */\n            }\n\n            h1 { \n                color: #cdd6f4; /* Light text */\n            }\n\n            table { \n                width: 80%; \n                margin: 0 auto; \n                border-collapse: collapse; \n                background: #1a1b26; /* Darker table background */\n                box-shadow: 0px 0px 10px rgba(0,0,0,0.4); \n                border-radius: 8px; \n                overflow: hidden;\n            }\n\n            th, td { \n                padding: 12px; \n                border: 1px solid #22232e; /* Slightly darker border */\n                text-align: left; \n            }\n\n            th { \n                background: #20212b; /* Darker header */\n                color: #f8f8f2; /* Light text */\n                text-transform: uppercase;\n                font-weight: bold;\n            }\n\n            tr:nth-child(even) { \n                background: #191a23; /* Slightly darker than before */\n            }\n\n            tr:hover { \n                background: #22232e; /* More subtle hover effect */\n            }\n\n            a { \n                text-decoration: none; \n                color: #7aa2f7; /* Slightly darker Nautobot blue */\n                font-weight: bold; \n            }\n\n            a:hover { \n                text-decoration: underline; \n                color: #6d99e5; /* Adjusted hover color */\n            }\n\n            .method { \n                font-weight: bold; \n                text-transform: uppercase; \n                padding: 3px 6px; \n                border-radius: 3px; \n                color: white; \n            }\n\n            /* Darkened API method colors */\n            .GET { background-color: #3dbb67; }  /* Darker green for GET */\n            .POST { background-color: #6ab7d6; } /* Darker blue for POST */\n            .PUT { background-color: #d4c356; }  /* Darker yellow for PUT */\n            .DELETE { background-color: #d94f4f; } /* Darker red for DELETE */\n            .PATCH { background-color: #505a75; } /* Darker grey for PATCH */\n        </style>\n        </head>\n        <body>\n            <h1>MockServer API Endpoints</h1>\n            <table>\n                <tr><th>Vendor</th><th>Method</th><th>Endpoints</th></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/prometheus/api/v1/targets\" target=\"_blank\">/prometheus/api/v1/targets</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/prometheus/api/v1/alerts\" target=\"_blank\">/prometheus/api/v1/alerts</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/prometheus/api/v1/query\" target=\"_blank\">/prometheus/api/v1/query</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method POST\">POST</span></td><td><a href=\"/prometheus/api/v1/write\" target=\"_blank\">/prometheus/api/v1/write</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method PATCH\">PATCH</span></td><td><a href=\"/prometheus/api/v1/alerts/alert_id\" target=\"_blank\">/prometheus/api/v1/alerts/alert_id</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method DELETE\">DELETE</span></td><td><a href=\"/prometheus/api/v1/alerts/alert_id\" target=\"_blank\">/prometheus/api/v1/alerts/alert_id</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/prometheus/api/v1/status/runtimeinfo\" target=\"_blank\">/prometheus/api/v1/status/runtimeinfo</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/prometheus/api/v1/rules\" target=\"_blank\">/prometheus/api/v1/rules</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method POST\">POST</span></td><td><a href=\"/prometheus/api/v1/alerts\" target=\"_blank\">/prometheus/api/v1/alerts</a></td></tr><tr><td><strong>Prometheus</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/prometheus/api/v1/status/config\" target=\"_blank\">/prometheus/api/v1/status/config</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/secret/data/db-creds\" target=\"_blank\">/vault/v1/secret/data/db-creds</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/secret/data/github\" target=\"_blank\">/vault/v1/secret/data/github</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/secret/data/prometheus\" target=\"_blank\">/vault/v1/secret/data/prometheus</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/secret/data/sunbird\" target=\"_blank\">/vault/v1/secret/data/sunbird</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/secret/data/network_infra\" target=\"_blank\">/vault/v1/secret/data/network_infra</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/secret/data/mysecret\" target=\"_blank\">/vault/v1/secret/data/mysecret</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method POST\">POST</span></td><td><a href=\"/vault/v1/auth/token/create\" target=\"_blank\">/vault/v1/auth/token/create</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/secret/data/protected\" target=\"_blank\">/vault/v1/secret/data/protected</a></td></tr><tr><td><strong>Vault</strong></td><td><span class=\"method GET\">GET</span></td><td><a href=\"/vault/v1/sys/health\" target=\"_blank\">/vault/v1/sys/health</a></td></tr></table>\n        </body>\n        </html>",
+      "headers": {
+        "Content-Type": "text/html"
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"message\": \"Welcome to MockServer!\", \"endpoints\": [\"/v1/sys/health\", \"/v1/secret/data/mysecret\", \"/api/cisco/device/status\"] }",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/prometheus/api/v1/targets"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"status\": \"success\", \"data\": { \"activeTargets\": [{ \"scrapeUrl\": \"http://example.com:9090/metrics\", \"lastError\": \"\" }] } }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/prometheus/api/v1/alerts"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"status\": \"success\", \"data\": { \"alerts\": [{ \"labels\": { \"alertname\": \"HighCPUUsage\" }, \"state\": \"firing\" }] } }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/prometheus/api/v1/query"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"status\": \"success\", \"data\": { \"resultType\": \"vector\", \"result\": [{ \"metric\": { \"instance\": \"localhost:9090\" }, \"value\": [ 1678901234.123, \"1\" ] }] } }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/prometheus/api/v1/write"
+    },
+    "httpResponse": {
+      "statusCode": 202,
+      "body": "{ \"status\": \"success\", \"message\": \"Data accepted\" }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "PATCH",
+      "path": "/prometheus/api/v1/alerts/alert_id"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"status\": \"success\", \"message\": \"Alert updated\" }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "DELETE",
+      "path": "/prometheus/api/v1/alerts/alert_id"
+    },
+    "httpResponse": {
+      "statusCode": 204,
+      "body": "{ \"status\": \"success\", \"message\": \"Alert deleted\" }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/prometheus/api/v1/status/runtimeinfo"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"status\": \"success\", \"data\": { \"startTime\": \"2025-02-28T12:00:00Z\", \"cgoCalls\": 1200 } }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/prometheus/api/v1/rules"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"status\": \"success\", \"data\": { \"groups\": [{ \"name\": \"example-rules\", \"rules\": [{ \"state\": \"firing\", \"name\": \"HighCPUUsage\" }] }] } }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/prometheus/api/v1/alerts"
+    },
+    "httpResponse": {
+      "statusCode": 201,
+      "body": "{ \"status\": \"success\", \"message\": \"Alert created\" }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/prometheus/api/v1/status/config"
+    },
+    "httpResponse": {
+      "statusCode": 403,
+      "body": "{ \"status\": \"error\", \"message\": \"Access denied\" }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/secret/data/db-creds"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"request_id\": \"12345678-90ab-cdef-1234-567890abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"username\": \"test_username\", \"password\": \"test_password\", \"host\": \"mockingserver\", \"port\": 1080 }, \"metadata\": { \"created_time\": \"2025-02-27T12:34:56.789Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 2 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/secret/data/github"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretgithub\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/secret/data/prometheus"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretprometheus\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/secret/data/sunbird"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretsunbird\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/secret/data/network_infra"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretnetwork_infra\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/secret/data/mysecret"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"request_id\": \"abc123\", \"data\": { \"key\": \"supersecretvalue\" } }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/vault/v1/auth/token/create"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "{ \"auth\": { \"client_token\": \"fake-token-123\", \"lease_duration\": 3600, \"renewable\": true } }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/secret/data/protected"
+    },
+    "httpResponse": {
+      "statusCode": 403,
+      "body": "{ \"errors\": [\"permission denied\"] }"
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/vault/v1/sys/health"
+    },
+    "httpResponse": {
+      "statusCode": 503,
+      "body": "{ \"initialized\": true, \"sealed\": true, \"standby\": false }"
+    }
+  }
+]

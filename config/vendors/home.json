@@ -1,0 +1,15 @@
+[
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"message\": \"Welcome to MockServer!\", \"endpoints\": [\"/v1/sys/health\", \"/v1/secret/data/mysecret\", \"/api/cisco/device/status\"] }",
+            "headers": {
+                "Content-Type": "application/json"
+            }
+        }
+    }
+]

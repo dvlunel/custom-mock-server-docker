@@ -1,0 +1,92 @@
+[
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/secret/data/db-creds"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"request_id\": \"12345678-90ab-cdef-1234-567890abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"username\": \"test_username\", \"password\": \"test_password\", \"host\": \"mockingserver\", \"port\": 1080 }, \"metadata\": { \"created_time\": \"2025-02-27T12:34:56.789Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 2 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/secret/data/github"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretgithub\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/secret/data/prometheus"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretprometheus\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/secret/data/sunbird"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretsunbird\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/secret/data/network_infra"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"request_id\": \"1234-5678-91011-abcdef\", \"lease_id\": \"\", \"renewable\": false, \"lease_duration\": 0, \"data\": { \"data\": { \"key\": \"supersecretnetwork_infra\" }, \"metadata\": { \"created_time\": \"2025-02-28T12:00:00Z\", \"deletion_time\": \"\", \"destroyed\": false, \"version\": 3 } }, \"wrap_info\": null, \"warnings\": null, \"auth\": null }"
+        }
+    },   
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/secret/data/mysecret"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"request_id\": \"abc123\", \"data\": { \"key\": \"supersecretvalue\" } }"
+        }
+    },                
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/vault/v1/auth/token/create"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"auth\": { \"client_token\": \"fake-token-123\", \"lease_duration\": 3600, \"renewable\": true } }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/secret/data/protected"
+        },
+        "httpResponse": {
+            "statusCode": 403,
+            "body": "{ \"errors\": [\"permission denied\"] }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/vault/v1/sys/health"
+        },
+        "httpResponse": {
+            "statusCode": 503,
+            "body": "{ \"initialized\": true, \"sealed\": true, \"standby\": false }"
+        }
+    }
+]

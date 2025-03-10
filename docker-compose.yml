@@ -1,0 +1,11 @@
+services:
+  mockserver:
+    image: mockserver/mockserver
+    container_name: mockserver
+    platform: "linux/amd64"  # Ensure it runs on Mac M1/M2
+    ports:
+      - "1080:1080"
+    environment:
+      - MOCKSERVER_INITIALIZATION_JSON_PATH=/config/mockserver.json
+    volumes:
+      - ./config/mockserver.json:/config/mockserver.json

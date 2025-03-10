@@ -1,0 +1,102 @@
+[
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/prometheus/api/v1/targets"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"status\": \"success\", \"data\": { \"activeTargets\": [{ \"scrapeUrl\": \"http://example.com:9090/metrics\", \"lastError\": \"\" }] } }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/prometheus/api/v1/alerts"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"status\": \"success\", \"data\": { \"alerts\": [{ \"labels\": { \"alertname\": \"HighCPUUsage\" }, \"state\": \"firing\" }] } }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/prometheus/api/v1/query"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"status\": \"success\", \"data\": { \"resultType\": \"vector\", \"result\": [{ \"metric\": { \"instance\": \"localhost:9090\" }, \"value\": [ 1678901234.123, \"1\" ] }] } }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/prometheus/api/v1/write"
+        },
+        "httpResponse": {
+            "statusCode": 202,
+            "body": "{ \"status\": \"success\", \"message\": \"Data accepted\" }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "PATCH",
+            "path": "/prometheus/api/v1/alerts/alert_id"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"status\": \"success\", \"message\": \"Alert updated\" }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "DELETE",
+            "path": "/prometheus/api/v1/alerts/alert_id"
+        },
+        "httpResponse": {
+            "statusCode": 204,
+            "body": "{ \"status\": \"success\", \"message\": \"Alert deleted\" }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/prometheus/api/v1/status/runtimeinfo"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"status\": \"success\", \"data\": { \"startTime\": \"2025-02-28T12:00:00Z\", \"cgoCalls\": 1200 } }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/prometheus/api/v1/rules"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": "{ \"status\": \"success\", \"data\": { \"groups\": [{ \"name\": \"example-rules\", \"rules\": [{ \"state\": \"firing\", \"name\": \"HighCPUUsage\" }] }] } }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "POST",
+            "path": "/prometheus/api/v1/alerts"
+        },
+        "httpResponse": {
+            "statusCode": 201,
+            "body": "{ \"status\": \"success\", \"message\": \"Alert created\" }"
+        }
+    },
+    {
+        "httpRequest": {
+            "method": "GET",
+            "path": "/prometheus/api/v1/status/config"
+        },
+        "httpResponse": {
+            "statusCode": 403,
+            "body": "{ \"status\": \"error\", \"message\": \"Access denied\" }"
+        }
+    }
+]
