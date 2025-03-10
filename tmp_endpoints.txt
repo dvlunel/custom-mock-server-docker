@@ -1,4 +1,0 @@
-/v1/auth/token/create
-/v1/secret/data/mysecret
-/v1/secret/data/protected
-/v1/sys/health
